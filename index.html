@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Daisy UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-10 space-y-10">
+
+    <!-- Button -->
+
+    <section>
+        <button class="btn">Click me</button>
+        <button class="btn btn-primary">Click me</button>
+        <button class="btn btn-ghost">Click me</button>
+        <button class="btn btn-neutral">Click me</button>
+        <button class="btn btn-outline btn-primary">Click me</button>
+    </section>
+
+    <hr class="mt-4">
+
+    <!-- dropdown -->
+
+    <section class="mt-20">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn m-1">Click</div>
+            <div tabindex="0"
+                class="dropdown-content card card-compact bg-primary text-primary-content z-[1] w-64 p-2 shadow">
+                <div class="card-body">
+                    <h3 class="card-title">Card title!</h3>
+                    <p>you can use any element as a dropdown.</p>
+                </div>
+            </div>
+        </div>
+        <!-- You can open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+        <dialog id="my_modal_4" class="modal">
+            <div class="modal-box w-11/12 max-w-5xl">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <h3 class="text-4xl">Dark mode</h3>
+        <label class="flex cursor-pointer gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <path
+                d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            </svg>
+            <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </label>
+          <h3 class="text-4xl">You can change the theme as your wish</h3>
+          <div class="form-control w-2/12 ">
+            <label class="label cursor-pointer gap-4">
+              <span class="label-text">Default</span>
+              <input type="radio" name="theme-radios" class="radio theme-controller" value="default" />
+            </label>
+          </div>
+          <div class="form-control w-2/12">
+            <label class="label cursor-pointer gap-4">
+              <span class="label-text">Retro</span>
+              <input type="radio" name="theme-radios" class="radio theme-controller" value="retro" />
+            </label>
+          </div>
+          <div class="form-control w-2/12">
+            <label class="label cursor-pointer gap-4">
+              <span class="label-text">Cyberpunk</span>
+              <input type="radio" name="theme-radios" class="radio theme-controller" value="cyberpunk" />
+            </label>
+          </div>
+          <div class="form-control w-2/12">
+            <label class="label cursor-pointer gap-4">
+              <span class="label-text">Valentine</span>
+              <input type="radio" name="theme-radios" class="radio theme-controller" value="valentine" />
+            </label>
+          </div>
+          <div class="form-control w-2/12">
+            <label class="label cursor-pointer gap-4">
+              <span class="label-text">Aqua</span>
+              <input type="radio" name="theme-radios" class="radio theme-controller" value="aqua" />
+            </label>
+          </div>
+    </section>
+
+
+    <section class="flex gap-4">
+        <div class="card bg-base-100 image-full w-96 shadow-xl">
+            <figure>
+              <img
+                src="images/jacket-4.png"
+                alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Jacket-!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section>
+        <div class="carousel w-full">
+            <div id="item1" class="carousel-item w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                class="w-full" />
+            </div>
+            <div id="item2" class="carousel-item w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                class="w-full" />
+            </div>
+            <div id="item3" class="carousel-item w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                class="w-full" />
+            </div>
+            <div id="item4" class="carousel-item w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                class="w-full" />
+            </div>
+          </div>
+          <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#item1" class="btn btn-xs">1</a>
+            <a href="#item2" class="btn btn-xs">2</a>
+            <a href="#item3" class="btn btn-xs">3</a>
+            <a href="#item4" class="btn btn-xs">4</a>
+          </div>
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                class="w-full" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                class="w-full" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                class="w-full" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                class="w-full" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section>
+        <div class="chat chat-start">
+            <div class="chat-bubble">
+              It's over Anakin,
+              <br />
+              I have the high ground.
+            </div>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-bubble">You underestimate my power!</div>
+          </div>
+    </section>
+
+    <section>
+        <div class="diff aspect-[16/9]">
+            <div class="diff-item-1">
+              <div class="bg-primary text-primary-content grid place-content-center text-9xl font-black">
+                DAISY
+              </div>
+            </div>
+            <div class="diff-item-2">
+              <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
+            </div>
+            <div class="diff-resizer"></div>
+          </div>
+    </section>
+
+    <section>
+        <div class="h-96 overflow-x-auto">
+            <table class="table table-pin-rows">
+              <thead>
+                <tr>
+                  <th>A</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Ant-Man</td></tr>
+                <tr><td>Aquaman</td></tr>
+                <tr><td>Asterix</td></tr>
+                <tr><td>The Atom</td></tr>
+                <tr><td>The Avengers</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Batgirl</td></tr>
+                <tr><td>Batman</td></tr>
+                <tr><td>Batwoman</td></tr>
+                <tr><td>Black Canary</td></tr>
+                <tr><td>Black Panther</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>C</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Captain America</td></tr>
+                <tr><td>Captain Marvel</td></tr>
+                <tr><td>Catwoman</td></tr>
+                <tr><td>Conan the Barbarian</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>D</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Daredevil</td></tr>
+                <tr><td>The Defenders</td></tr>
+                <tr><td>Doc Savage</td></tr>
+                <tr><td>Doctor Strange</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>E</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Elektra</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>F</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Fantastic Four</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>G</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Ghost Rider</td></tr>
+                <tr><td>Green Arrow</td></tr>
+                <tr><td>Green Lantern</td></tr>
+                <tr><td>Guardians of the Galaxy</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>H</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Hawkeye</td></tr>
+                <tr><td>Hellboy</td></tr>
+                <tr><td>Incredible Hulk</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>I</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Iron Fist</td></tr>
+                <tr><td>Iron Man</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Marvelman</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>R</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Robin</td></tr>
+                <tr><td>The Rocketeer</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>S</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>The Shadow</td></tr>
+                <tr><td>Spider-Man</td></tr>
+                <tr><td>Sub-Mariner</td></tr>
+                <tr><td>Supergirl</td></tr>
+                <tr><td>Superman</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>T</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Teenage Mutant Ninja Turtles</td></tr>
+                <tr><td>Thor</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>W</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>The Wasp</td></tr>
+                <tr><td>Watchmen</td></tr>
+                <tr><td>Wolverine</td></tr>
+                <tr><td>Wonder Woman</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>X</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>X-Men</td></tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>Z</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zatanna</td></tr>
+                <tr><td>Zatara</td></tr>
+              </tbody>
+            </table>
+          </div>
+    </section>
+</body>
+
+</html>
